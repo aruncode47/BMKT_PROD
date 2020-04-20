@@ -4,17 +4,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using MySql.Data;
 using System.Configuration;
 using System.Globalization;
+using MySql.Data.MySqlClient;
+
 public partial class addChild : System.Web.UI.Page
 {
-    // MySqlConnection connection;
+    MySqlConnection connection;
     DataSet ds;
-    //MySqlConnection mySqlCon = new MySqlConnection(ConfigurationManager.ConnectionStrings["mySqlConn"].ConnectionString);
-    //MySqlCommand mySqlCmd = new MySqlCommand();
+    MySqlConnection mySqlCon = new MySqlConnection(ConfigurationManager.ConnectionStrings["mySqlConn"].ConnectionString);
+    MySqlCommand mySqlCmd = new MySqlCommand();
     protected void Page_Load(object sender, EventArgs e)
     {
-        /*
+        
         string sql = "";
         mySqlCon.Open();
         sql = " select row_id, unit_name from unit_master where UNIT_FLAG = 'A' ";
@@ -28,7 +31,12 @@ public partial class addChild : System.Web.UI.Page
         ddlUnit.DataValueField = "row_id";
         ddlUnit.DataBind();
         ddlUnit.Items.Insert(0, new ListItem(" - Select State - ", ""));
-        */
+
+        ddlUnit_E.DataSource = ds;
+        ddlUnit_E.DataTextField = "unit_name";
+        ddlUnit_E.DataValueField = "row_id";
+        ddlUnit_E.DataBind();
+        ddlUnit_E.Items.Insert(0, new ListItem(" - Select State - ", ""));
 
     }
 }
