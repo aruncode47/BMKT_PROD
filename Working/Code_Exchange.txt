@@ -1,0 +1,82 @@
+
+
+/*********************** Escape Sequence For XML  ***********************/
+public string ConvertToXMLFormat(string xml)
+{
+
+	if (!String.IsNullOrEmpty(xml))
+	{
+		xml = xml.Replace("&", "&amp;");
+		xml = xml.Replace("\"", "&quot;");
+		xml = xml.Replace("'", "&apos;");
+		xml = xml.Replace("<", "&lt;");
+		xml = xml.Replace(">", "&gt;");
+
+		return xml;
+	}
+	else
+		return xml;
+}
+
+/*********************** Escape Sequence For XML  ***********************/
+public string ConvertFromXMLFormat(string xml)
+{
+
+	if (!String.IsNullOrEmpty(xml))
+	{
+		xml = xml.Replace("&amp;", "&");
+		xml = xml.Replace("&quot;", "\"");
+		xml = xml.Replace("&apos;", "'");
+		xml = xml.Replace("&lt;", "<");
+		xml = xml.Replace("&gt;", ">");
+		xml = xml.Replace("&nbsp;", "");
+		return xml;
+	}
+	else
+		return xml;
+}
+
+/*********************** XML string building  ***********************/
+
+StringBuilder xmlChild = new StringBuilder();
+xmlChild.AppendFormat("<{0}>", "Child_Details");
+xmlChild.AppendFormat("<G_Adm_No>{0}</G_Adm_No>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("<U_Adm_No>{0}</U_Adm_No>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("<Adm_Date>{0}</Adm_Date>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("<Name>{0}</Name>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("<Gender>{0}</Gender>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("DOB>{0}</DOB>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("DOB_Mode>{0}</DOB_Mode>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("DOB_Status>{0}</DOB_Status>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Parent_Visit>{0}</Parent_Visit>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Unit_Id>{0}</Unit_Id>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Child_Cond>{0}</Child_Cond>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Vaccin>{0}</Vaccin>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Child_Edu>{0}</Child_Edu>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Identity_1>{0}</Identity_1>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Identity_2>{0}</Identity_2>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Identity_3>{0}</Identity_3>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Rel_Recomm>{0}</Rel_Recomm>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Father_Name>{0}</Father_Name>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Father_Relg>{0}</Father_Relg>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Father_Occ>{0}</Father_Occ>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Father_Inc>{0}</Father_Inc>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Mother_Name>{0}</Mother_Name>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Mother_Relg>{0}</Mother_Relg>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Mother_Occ>{0}</Mother_Occ>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Mother_Inc>{0}</Mother_Inc>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("CWC_No>{0}</CWC_No>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Rescued_By>{0}</Rescued_By>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Guard_ph1>{0}</Guard_ph1>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Guard_ph2>{0}</Guard_ph2>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Child_Stage>{0}</Child_Stage>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Reason>{0}</Reason>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Family_History>{0}</Family_History>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Address>{0}</Address>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Created_By>{0}</Created_By>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Created_On>{0}</Created_On>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Updated_By>{0}</Updated_By>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("Updated_On>{0}</Updated_On>", ConvertToXMLFormat(ipArray[0]);
+xmlChild.AppendFormat("</{0}>", "Child_Details");
+
+

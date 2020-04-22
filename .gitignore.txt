@@ -1,0 +1,7 @@
+# web config
+Web.config
+Web.Debug.config
+
+# solution files
+BMKT_PROD.sln
+BMKT_PROD.v12.suo
